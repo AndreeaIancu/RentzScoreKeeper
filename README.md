@@ -29,3 +29,4 @@ The game consists in 7 different subgames (5 negative and 2 pozitive), each play
      100 points for the player who finishes 5th.
    
 The score for the specific round can be doubled if the player, at the moment of choosing on of the subgames to play, chooses to play the subgame blind (not looking at his cards before picking the next subgame to be played).
+
