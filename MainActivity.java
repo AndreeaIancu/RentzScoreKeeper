@@ -19,6 +19,20 @@ public class MainActivity extends AppCompatActivity {
     int scoreForPlayerFour = 0;
     int scoreForPlayerFive = 0;
     int scoreForPlayerSix = 0;
+    EditText playerOneEdtTxt;
+    String playerOneName;
+    EditText playerTwoEdtTxt;
+    String playerTwoName;
+    EditText playerThreeEdtTxt;
+    String playerThreeName;
+    EditText playerFourEdtTxt;
+    String playerFourName;
+    EditText playerFiveEdtTxt;
+    String playerFiveName;
+    EditText playerSixEdtTxt;
+    String playerSixName;
+
+
 
 
     @Override
@@ -42,6 +56,23 @@ public class MainActivity extends AppCompatActivity {
             displayScoreforPlayerFive(scoreForPlayerFive);
             scoreForPlayerSix = savedInstanceState.getInt("scoreForPlayerSix");
             displayScoreforPlayerSix(scoreForPlayerSix);
+            playerOneEdtTxt =(EditText)findViewById(R.id.player_1_view);
+            playerOneEdtTxt.setText(savedInstanceState.getString(playerOneName));
+            playerTwoEdtTxt=(EditText)findViewById(R.id.player_2_view);
+            playerTwoEdtTxt.setText(savedInstanceState.getString(playerTwoName));
+            /**
+
+            playerThreeEdtTxt=(EditText)findViewById(R.id.player_3_view);
+            playerThreeEdtTxt.setText(savedInstanceState.getString(playerThreeName));
+            playerFourEdtTxt = (EditText)findViewById(R.id.player_4_view);
+            playerFourEdtTxt.setText(savedInstanceState.getString(playerFourName));
+            playerFiveEdtTxt=(EditText)findViewById(R.id.player_5_view);
+            playerFiveEdtTxt.setText(savedInstanceState.getString(playerFiveName));
+            playerSixEdtTxt=(EditText)findViewById(R.id.player_6_view);
+            playerSixEdtTxt.setText(savedInstanceState.getString(playerSixName));
+             */
+
+
 
         }
 
@@ -57,6 +88,47 @@ public class MainActivity extends AppCompatActivity {
         outState.putInt("scoreForPlayerFour", scoreForPlayerFour);
         outState.putInt("scoreForPlayerFive", scoreForPlayerFive);
         outState.putInt("scoreForPlayerSix", scoreForPlayerSix);
+        playerOneEdtTxt = (EditText)findViewById(R.id.player_1_view);
+        outState.putString(playerOneName,playerOneEdtTxt.getText().toString());
+        playerTwoEdtTxt = (EditText)findViewById(R.id.player_2_view);
+        outState.putString(playerTwoName,playerTwoEdtTxt.getText().toString());
+
+        /**
+        playerTwoEdtTxt = (EditText)findViewById(R.id.player_2_view);
+        outState.putString(playerTwoName,playerTwoEdtTxt.getText().toString());
+        playerThreeEdtTxt = (EditText)findViewById(R.id.player_3_view);
+        outState.putString(playerThreeName,playerThreeEdtTxt.getText().toString());
+        playerFourEdtTxt = (EditText)findViewById(R.id.player_4_view);
+        outState.putString(playerFourName,playerFourEdtTxt.getText().toString());
+        playerFiveEdtTxt = (EditText)findViewById(R.id.player_5_view);
+        outState.putString(playerFiveName,playerFiveEdtTxt.getText().toString());
+        playerSixEdtTxt = (EditText)findViewById(R.id.player_6_view);
+        outState.putString(playerSixName,playerSixEdtTxt.getText().toString());
+         */
+
+    }
+
+    @Override
+    public void onRestoreInstanceState (Bundle savedInstanceState){
+        // Always call the superclass so it can restore the view hierarchy
+        super.onRestoreInstanceState(savedInstanceState);
+        // Restore state members from saved instance
+        playerOneEdtTxt =(EditText)findViewById(R.id.player_1_view);
+        playerOneEdtTxt.setText(savedInstanceState.getString(playerOneName));
+        playerTwoEdtTxt=(EditText)findViewById(R.id.player_2_view);
+        playerTwoEdtTxt.setText(savedInstanceState.getString(playerTwoName));
+        /**
+        playerTwoEdtTxt=(EditText)findViewById(R.id.player_2_view);
+        playerTwoEdtTxt.setText(savedInstanceState.getString(playerTwoName));
+        playerThreeEdtTxt=(EditText)findViewById(R.id.player_3_view);
+        playerThreeEdtTxt.setText(savedInstanceState.getString(playerThreeName));
+        playerFourEdtTxt = (EditText)findViewById(R.id.player_4_view);
+        playerFourEdtTxt.setText(savedInstanceState.getString(playerFourName));
+        playerFiveEdtTxt=(EditText)findViewById(R.id.player_5_view);
+        playerFiveEdtTxt.setText(savedInstanceState.getString(playerFiveName));
+        playerSixEdtTxt=(EditText)findViewById(R.id.player_6_view);
+        playerSixEdtTxt.setText(savedInstanceState.getString(playerSixName));
+         */
 
     }
 
